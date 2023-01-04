@@ -1,5 +1,5 @@
-Anatomical districts: Cardiac, Abdominal, Obstetric.
+*Anatomical districts*: Cardiac, Abdominal, Obstetric.
 
-Up-sampling factors: 2X, 4X.
+*Up-sampling factors*: 2X, 4X.
 
-Images: Raw, denoised.
+*Input images*: Raw, denoised.
