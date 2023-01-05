@@ -5,7 +5,7 @@ We provide our trained models for super-resolution prediction on different anato
 Furthermore, we provide pseudo-code for both the prediction and the training of the networks.
 
 # Requirements
-Tested with Matlab2021b, Tensorflow 2.7.0
+Tested with Matlab2021b, Tensorflow 2.7.0, Tensorlayer 2.2.4.
 
 Matlab toolbox:  
 -Image processing  
