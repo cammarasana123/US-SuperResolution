@@ -37,15 +37,15 @@ def train():
 
     ## initialize learning (G)
     for epoch in range(n_epoch_init):
-        MSE_LOSS = 0
+        log_LOSS = 0
         for step, (lr_patchs, hr_patchs) in enumerate(train_ds):            
             with tf.GradientTape() as tape:
                 fake_hr_patchs = G(lr_patchs)
                 FP = fake_hr_patchs[:,1::2,:,:]
                 HP = hr_patchs[:,1::2,:,:]
-                mse_loss = my_error_function(FP,HP)
+                log_loss = my_error_function(FP,HP)
             grad = tape.gradient(mse_loss, G.trainable_weights)
             g_optimizer_init.apply_gradients(zip(grad, G.trainable_weights))
-            MSE_LOSS = MSE_LOSS + mse_loss
+            LOG_LOSS = LOG_LOSS + log_loss
 
 train()
